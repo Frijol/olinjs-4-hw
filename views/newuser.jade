@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1 = title
+
+	h1 Sign Up/Sign In
+
+	form(method='post', action='/users/create', id='newform')
+		|Name: 
+		input(name='name', id='newinput')
+		button(type='submit')
+			|Submit
