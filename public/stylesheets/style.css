@@ -25,7 +25,25 @@ a {
 	text-align: center;
 	font: 24px Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	padding-top: 4%;
+	padding: 15px;
+	padding-bottom: 0px;
+}
+
+#pad {
+	padding: 15px;
+}
+
+#twithead {
+	text-align: left;
+	font: 24px Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+#twitbody {
+	text-align: left;
+	font: 14px Arial, Helvetica, sans-serif;
+	padding: 10px;
+	padding-left: 0;
 }
 
 div.hr {
