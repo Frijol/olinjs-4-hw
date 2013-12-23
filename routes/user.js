@@ -3,15 +3,6 @@
  * GET users listing.
  */
 
-<<<<<<< HEAD
-exports.create = function(req, res){
-	res.render('users');
-}
-
-exports.list = function(req, res){
-  res.send("respond with a resource");
-};
-=======
 User = require('../models/user.js');
 
 exports.list = function(req, res){
@@ -56,4 +47,3 @@ exports.usr = function(req, res) {
 	// 	res.send('user' + req.body);
 	// }
 }
->>>>>>> 46ac99379ea4d59a633a44a7eb8b70146a6ecf66
