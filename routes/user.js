@@ -13,7 +13,7 @@ exports.list = function(req, res){
 };
 
 exports.new = function(req, res){
-  res.render('../views/newuser.jade', {});
+  res.render('../views/newuser.jade');
 }
 
 exports.create = function(req, res){
@@ -24,7 +24,6 @@ exports.create = function(req, res){
 		if (err) throw err;
 		for (var i in docs) {
 			if (docs[i].name == req.body.name) {
-				console.log('hi')
 				var userExists = true;
 			}
 		}
@@ -41,9 +40,9 @@ exports.create = function(req, res){
 }
 
 exports.usr = function(req, res) {
-	res.redirect('/')
-	// var usr = User.find({name: req.params.name.split(':')[1] }), function (err, docs) {
-	// 	if (err) throw err;
-	// 	res.send('user' + req.body);
-	// }
+	// res.redirect('/')
+	var usr = User.find({name: req.params.name.split(':')[1]}, function (err, docs) {
+		if (err) throw err;
+		res.send('user' + req.body);
+	});
 }
