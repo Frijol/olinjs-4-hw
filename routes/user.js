@@ -1,8 +1,3 @@
-
-/*
- * GET users listing.
- */
-
 User = require('../models/user.js');
 
 exports.list = function(req, res){
@@ -43,8 +38,4 @@ exports.usr = function(req, res) {
 	var username = req.route.params.usr.split(':')[1];
 	req.session.user = username;
 	res.redirect('/');
-	// var usr = User.find({name: username}, function (err, docs) {
-	// 	if (err) throw err;
-	// 	res.send(docs);
-	// });
 }
