@@ -1,13 +1,15 @@
-
 /*
- * GET home page.
- */
+* GET home page.
+*/
 
- Twit = require('../models/twit.js');
- var twits = Twit.find({}, function (err, docs) {
- 	if (err) throw err;
- })
+Twit = require('../models/twit.js');
+var alltwits;
+
+var twits = Twit.find({}, function (err, docs) {
+	if (err) throw err;
+	alltwits = docs
+})
 
 exports.index = function(req, res){
-	res.render('index');
+	res.render('index', {docs: alltwits});
 }

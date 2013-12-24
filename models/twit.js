@@ -1,9 +1,7 @@
 //Schema for twits
-var User = require('../models/user.js');
 var mongoose = require('mongoose');
 
 var twitSchema = mongoose.Schema({
-	// _creator: User,
 	message: String
 });
 
