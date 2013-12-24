@@ -2,6 +2,7 @@
 var mongoose = require('mongoose');
 
 var twitSchema = mongoose.Schema({
+	username: String,
 	message: String
 });
 

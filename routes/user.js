@@ -40,10 +40,11 @@ exports.create = function(req, res){
 }
 
 exports.usr = function(req, res) {
-	var usr = User.find({name: req.route.params.usr.split(':')[1]}, function (err, docs) {
-		if (err) throw err;
-		// req.session.user = usr;
-		// console.log(req.session);
-		res.send(docs);
-	});
+	var username = req.route.params.usr.split(':')[1];
+	req.session.user = username;
+	res.redirect('/');
+	// var usr = User.find({name: username}, function (err, docs) {
+	// 	if (err) throw err;
+	// 	res.send(docs);
+	// });
 }
