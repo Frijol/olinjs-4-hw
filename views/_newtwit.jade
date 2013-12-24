@@ -1,0 +1,11 @@
+form(method='post', action='/twits/create', id="newform")
+	.row
+		.small-4.columns.left
+			.title Compose Twit
+		.pad
+			.small-7.columns.right
+				textarea(name='newtwit', id="newinput", maxlength=140)
+	.row
+		.small-6.columns.right
+			button(type="submit")
+				| Post
