@@ -8,10 +8,6 @@
  	if (err) throw err;
  })
 
-exports.index = function(req, res){;
+exports.index = function(req, res){
 	res.render('index');
 }
-
-/*
-use setinterval to check for new ones every 2000 (no refresh)
-*/

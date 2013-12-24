@@ -1,5 +1,5 @@
 //Schema for twits
-User = require('../models/user.js');
+var User = require('../models/user.js');
 var mongoose = require('mongoose');
 
 var twitSchema = mongoose.Schema({
