@@ -17,7 +17,6 @@ exports.new = function(req, res){
 }
 
 exports.create = function(req, res){
-	console.log(req.body);
 	//check if user already exists
 	var userExists = false;
 	var users = User.find({}, function (err, docs) {
@@ -27,21 +26,21 @@ exports.create = function(req, res){
 				var userExists = true;
 			}
 		}
+		//create if necessary, redir to their page
 		if (userExists) {
-			res.redirect('/:' + req.body.name)//probably wrong
+			res.redirect('/users/:' + req.body.name)
 		} else {
 			var newuser = new User(req.body);
 			newuser.save(function (err) {
 				if (err) throw err;
-				res.redirect('/:' + req.body.name)//also probably wrong
+				res.redirect('/users/:' + req.body.name)
 			});
 		}
 	});
 }
 
 exports.usr = function(req, res) {
-	// res.redirect('/')
-	var usr = User.find({name: req.params.name.split(':')[1]}, function (err, docs) {
+	var usr = User.find({name: req.route.params.usr.split(':')[1]}, function (err, docs) {
 		if (err) throw err;
 		res.send('user' + req.body);
 	});
