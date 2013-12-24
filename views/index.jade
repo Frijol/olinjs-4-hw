@@ -1,23 +1,36 @@
-extends layout
+doctype 5
+html
+	head
+		title= title
+		link(href="/stylesheets/foundation.min.css", rel="stylesheet")
+		link(rel='stylesheet', href='/stylesheets/style.css')
 
-block content
+		script(src="/javascripts/index-client.js")
+		script(src="/javascripts/jquery.min.js")
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/foundation/4.3.1/js/foundation/foundation.min.js")
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/foundation/4.3.1/js/foundation/foundation.forms.js")
+		script.
+			$(document).foundation();
 
-	.row
-			.large-12.columns.center
-				#header Crappy Twitter
+	body
+		block content
 
-	.row
-		.large-4.columns.left
-			#container
-				include _newtwit
+			.row
+				.large-12.columns.center
+					#header Crappy Twitter
 
-		.large-8.columns.right
-			#container
-				#title Look at all these twits!
+			.row
+				.large-4.columns.left
+					#container
+						include _newtwit
 
-				div.hr
+				.large-8.columns.right
+					#container
+						#title Look at all these twits!
 
-				#pad
-					include _twits
-					include _twits
-					include _twits
+						div.hr
+
+						#pad
+							include _twits
+							include _twits
+							include _twits

@@ -9,8 +9,13 @@
  })
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
-};
+	// setInterval(function () {
+	// 	$.get( "index.jade", function( data ) {
+	// 	  alert( "Load was performed." )
+	// 	});
+	// }, 2000);
+	res.render('index');
+}
 
 /*
 use setinterval to check for new ones every 2000 (no refresh)

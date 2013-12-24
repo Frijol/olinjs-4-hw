@@ -42,6 +42,8 @@ exports.create = function(req, res){
 exports.usr = function(req, res) {
 	var usr = User.find({name: req.route.params.usr.split(':')[1]}, function (err, docs) {
 		if (err) throw err;
-		res.send('user' + req.body);
+		// req.session.user = usr;
+		// console.log(req.session);
+		res.send(docs);
 	});
 }
