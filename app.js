@@ -41,7 +41,8 @@ app.get('/users', user.list);
 app.get('/users/new', user.new);
 app.post('/users/create', user.create);
 app.get('/users/:usr', user.usr);
-app.post('/twits/create', twits.create)
+app.post('/twits/create', twits.create);
+app.get('/twits/getTweets', twits.getTweets);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

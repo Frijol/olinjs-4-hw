@@ -8,20 +8,20 @@ a {
   color: #00B7FF;
 }
 
-#header {
+.header {
 	text-align: center;
 	font: 36px Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	padding-bottom: 50px;
 }
 
-#container {
+.container {
 	border: 7px solid black;
 	border-radius: 15px;
 	background: #a5a5a5;
 }
 
-#title {
+.title {
 	text-align: center;
 	font: 24px Arial, Helvetica, sans-serif;
 	font-weight: bold;
@@ -29,17 +29,17 @@ a {
 	padding-bottom: 0px;
 }
 
-#pad {
+.pad {
 	padding: 15px;
 }
 
-#twithead {
+.twithead {
 	text-align: left;
 	font: 24px Arial, Helvetica, sans-serif;
 	font-weight: bold;
 }
 
-#twitbody {
+.twitbody {
 	text-align: left;
 	font: 14px Arial, Helvetica, sans-serif;
 	padding: 12px;

@@ -1,5 +1,6 @@
 for i in docs
-	#twithead
-		| #{i.username}
-	#twitbody
-		| #{i.message}
+	if i.username
+		.twithead
+			| #{i.username}
+		.twitbody
+			| #{i.message}
