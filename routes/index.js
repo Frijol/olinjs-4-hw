@@ -8,12 +8,7 @@
  	if (err) throw err;
  })
 
-exports.index = function(req, res){
-	// setInterval(function () {
-	// 	$.get( "index.jade", function( data ) {
-	// 	  alert( "Load was performed." )
-	// 	});
-	// }, 2000);
+exports.index = function(req, res){;
 	res.render('index');
 }
 
